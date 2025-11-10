@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrightMind - Math Magic</title>
+  <link rel="stylesheet" href="math.css" />
+
+</head>
+<body>
+   <audio id="backgroundAudio" autoplay loop>
+  <source src="math.mp3" type="audio/mpeg" />
+</audio>
+  <!-- 🌥️ Animated Cloud Background -->
+  <div class="blueclouds">
+    <img src="blueclouds.png" class="cloud cloud1" />
+    <img src="bluecoulds2.png" class="cloud cloud2" />
+    <img src="blueclouds3.png" class="cloud cloud3" />
+    <img src="blueclouds4.png" class="cloud cloud4" />
+  </div>
+
+  <!-- 🧠 Header & Navigation -->
+  <header>
+    <h1>🧠 Welcome to Math Magic!</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="art.html">Creative Corner</a></li>
+        <li><a href="reading.html">Reading Rainbow</a></li>
+        <li><a href="science.html">Science Lab</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="math-zone">
+      <h2>Choose a Math Adventure:</h2>
+      <div class="cards">
+        <div class="card" onclick="startFrogGame()">🐸 Play Frog Catcher</div>
+
+        <div class="card" onclick="showLearnAddition()">📘 Learn Addition</div>
+        <div class="card" onclick="showLearnSubtraction()">➖ Learn Subtraction</div>
+        <div class="card" onclick="startQuiz()">🧩 Math Quiz</div>
+      </div>
+    </section>
+<div id="frogGameWrapper" style="display: none;">
+  <canvas id="frogGameCanvas" width="600" height="400"></canvas>
+  <div id="frogGameHUD">
+    <p id="frogScore">🍎 Apples Caught: 0</p>
+    <button id="closeFrogGame" onclick="closeFrogGame()">❌ Close Game</button>
+  </div>
+</div>
+
+
+
+    <section id="learnAddition" style="display:none;" class="learn-addition">
+      <h2>🧮 How to Do Addition</h2>
+      <p>Addition means putting things together to find out how many you have in total.</p>
+      <div class="example-box">
+        <p>Example: If you have <strong>2 apples</strong> 🍎 and get <strong>3 more apples</strong> 🍎, how many apples do you have?</p>
+        <p><strong>2 + 3 = 5</strong> 🍎</p>
+      </div>
+      <div class="visual-steps">
+        <div class="step">Step 1: Start with the first number → <span class="bubble">2</span></div>
+        <div class="step">Step 2: Count up the second number → <span class="bubble">+3</span></div>
+        <div class="step">Step 3: Reach the total → <span class="bubble">5</span></div>
+      </div>
+      <button onclick="startAdditionGame()">Try It Yourself!</button>
+    </section>
+
+    
+    <section id="learnSubtraction" style="display:none;" class="learn-subtraction">
+      <h2>➖ How to Do Subtraction</h2>
+      <p>Subtraction means taking away from a group to find out how many are left.</p>
+      <div class="example-box">
+        <p>Example: If you have <strong>5 apples</strong> 🍎 and give away <strong>2 apples</strong> 🍎, how many apples do you have left?</p>
+        <p><strong>5 - 2 = 3</strong> 🍎</p>
+      </div>
+      <div class="visual-steps">
+        <div class="step">Step 1: Start with the total → <span class="bubble">5</span></div>
+        <div class="step">Step 2: Take away the second number → <span class="bubble">-2</span></div>
+        <div class="step">Step 3: Count what’s left → <span class="bubble">3</span></div>
+      </div>
+      <button onclick="startSubtractionGame()">Try It Yourself!</button>
+    </section>
+
+
+    <section id="gameArea" style="display:none;">
+      <h2 id="gameTitle"></h2>
+      <div id="questionBox"></div>
+      <input type="number" id="answerInput" />
+      <button onclick="checkAnswer()">Submit</button>
+      <br /><br />
+      <button onclick="revealCalculator()" id="hintButton">💡 Use Hint</button>
+
+      <div id="calculator" class="calculator" style="display: none;">
+        <h3>🧮 Calculator</h3>
+        <input type="text" id="calcDisplay" readonly />
+        <div class="calc-buttons">
+          <button onclick="press('1')">1</button>
+          <button onclick="press('2')">2</button>
+          <button onclick="press('3')">3</button>
+          <button onclick="press('+')">+</button>
+          <button onclick="press('4')">4</button>
+          <button onclick="press('5')">5</button>
+          <button onclick="press('6')">6</button>
+          <button onclick="press('-')">-</button>
+          <button onclick="press('7')">7</button>
+          <button onclick="press('8')">8</button>
+          <button onclick="press('9')">9</button>
+          <button onclick="clearCalc()">C</button>
+          <button onclick="press('0')">0</button>
+          <button onclick="calculate()">=</button>
+        </div>
+      </div>
+
+      <p id="feedback"></p>
+    </section>
+  </main>
+
+  <script src="math.js"></script>
+</body>
+</html>

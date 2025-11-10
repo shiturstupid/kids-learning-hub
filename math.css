@@ -1,0 +1,361 @@
+.cloud1{
+    object-fit: cover;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+        animation: none;
+       z-index: -10;
+      }
+.blueclouds {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.6;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+
+.cloud2 { animation-delay: 0s; z-index: -1; }
+.cloud3 { animation-delay: 1s; z-index: -2; }
+.cloud4 { animation-delay: 2s; z-index: -3; }
+
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+#gameArea {
+  background-color: #fff0f5;
+  padding: 20px;
+  margin: 30px auto;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+#answerInput {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ff69b4;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to bottom right, #ffe4f1, #ffc0cb);
+  color: #4d004d;
+  padding-top: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ff69b4;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  list-style: none;
+  margin-top: -87px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  background-color: #ff1493;
+  padding: 8px 23px;
+  border-radius: 10px;
+}
+
+.math-zone {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  width: 180px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#gameArea {
+  text-align: center;
+  margin-top: 30px;
+}
+.learn-addition,
+.learn-subtraction {
+  background-color: white;
+  padding: 30px;
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.learn-addition h2,
+.learn-subtraction h2 {
+  color: #ff1493;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.learn-addition p,
+.learn-subtraction p {
+  font-size: 1.2rem;
+  color: #4d004d;
+}
+
+.example-box {
+  background-color: #ffe4f1;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+.visual-steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.step {
+  background-color: #ffccf9;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #800080;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.bubble {
+  background-color: #fff;
+  color: #ff1493;
+  padding: 6px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.learn-addition button,
+.learn-subtraction button {
+  margin-top: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-addition button:hover,
+.learn-subtraction button:hover {
+  background-color: #ff1493;
+}
+.calculator {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+  text-align: center;
+}
+
+.calculator h3 {
+  color: #ff1493;
+  margin-bottom: 10px;
+}
+
+#calcDisplay {
+  width: 80%;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calc-buttons button {
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: #ffccf9;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc-buttons button:hover {
+  background-color: #ffb4da;
+  color: #93235b;
+}
+    .calculator {
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+      text-align: center;
+    }
+
+    .calc-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .calc-buttons button {
+      padding: 10px;
+      font-size: 1.2rem;
+      background-color: #f270e3;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #calcDisplay {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      text-align: right;
+    }
+
+    #hintButton {
+      background-color: #ffccf9;
+      color: #800080;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #hintButton:hover {
+      background-color: #d64b90;
+      color: white;
+    }
+
+/* 🐸 Frog Game Wrapper */
+#frogGameWrapper {
+  position: relative;
+  width: 600px;
+  margin: 40px auto;
+  background: linear-gradient(to bottom right, #ffe4e1, #ffccdd);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  padding: 20px;
+}
+
+/* 🎮 Canvas Styling */
+#frogGameCanvas {
+  display: block;
+  margin: 0 auto;
+  border: 3px dashed #ff69b4;
+  border-radius: 12px;
+  background-color: #fff0f5;
+}
+
+/* 🍎 HUD Styling */
+#frogGameHUD {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+#frogScore {
+  font-size: 1.2rem;
+  color: #d6336c;
+  margin: 0;
+}
+
+#closeFrogGame {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#closeFrogGame:hover {
+  background-color: #ff69b4;
+}

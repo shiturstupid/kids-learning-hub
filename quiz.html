@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rainbow Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+     <audio id="backgroundAudio" autoplay loop>
+  <source src="quiz.mp3" type="audio/mpeg" />
+</audio>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+    
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-section">
+      <h1>🌟Quiz Challenge</h1>
+      <h4>Test your knowledge from every corner of the rainbow!</h4>
+
+      <div id="quizBox">
+        <p id="quizQuestion"></p>
+        <div id="quizOptions"></div>
+        <button id="nextBtn" onclick="nextQuizQuestion()" style="display:none;">➡️ Next</button>
+        <p id="scoreTracker">✅ Correct: 0 | ❌ Wrong: 0</p>
+        <button class="restartbtn" onclick="restartQuiz()">🔄 Restart</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

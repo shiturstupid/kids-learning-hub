@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rainbow Reading</title>
+  <link rel="stylesheet" href="reading.css" />
+</head>
+<body>
+     <audio id="readingAudio" autoplay loop>
+  <source src="reading.mp3" type="audio/mpeg" />
+
+</audio>
+
+  <!-- ☁️ Cloud Background -->
+  <div class="clouds">
+    <img src="greyclouds1.png" class="cloud cloud1" />
+    <img src="greyclouds2.png" class="cloud cloud2" />
+    <img src="greyclouds3.png" class="cloud cloud3" />
+    <img src="greyclouds4.png" class="cloud cloud4" />
+  </div>
+
+  <!-- 🧭 Navigation -->
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math.html">Maths</a></li>
+        <li><a href="art.html">Creative Corner</a></li>
+        <li><a href="science.html">Science Lab</a></li>
+        <li><a href="reading.html" class="active">Rainbow Reading</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 📚 Main Content -->
+  <main>
+    <div class="content-section">
+      <h1>🌈 Welcome to Rainbow Reading!</h1>
+      <h4>Discover stories, learn new words, and grow your reading rainbow!</h4>
+
+      <!-- 📖 Section Buttons -->
+      <div class="section-buttons">
+        <div class="card" onclick="showStoryExplorer()">📖 Story Explorer</div>
+        <div class="card" onclick="startReadingQuiz()">🧩 Take the Reading Quiz</div>
+      </div>
+
+      <!-- 📖 Story Explorer Section -->
+      <section id="storyExplorer" style="display:none;">
+        <h2>📖 Story Explorer</h2>
+        <p>Choose a story to begin your adventure!</p>
+
+        <div class="story-grid">
+          <div class="story-card" onclick="openStory('cloudStory')">☁️ The Curious Cloud</div>
+          <div class="story-card" onclick="openStory('moonStory')">🌙 Moonlight Adventure</div>
+          <div class="story-card" onclick="openStory('rainbowStory')">🌈 Rainbow Rescue</div>
+          <div class="story-card" onclick="openStory('seedStory')">🌱 The Little Seed</div>
+        </div>
+
+        <!-- Story Windows -->
+        <div id="cloudStory" class="story-window" style="display:none;">
+          <h3>☁️ The Curious Cloud</h3>
+          <p>
+            Coco the cloud wanted to explore the world below. She floated over forests, oceans, and cities, asking, “What do you need from me?”<br>
+            The flowers said, “We need your rain!”<br>
+            The sun said, “We need your shade!”<br>
+            And the children said, “We need your shapes to dream!”<br>
+            Coco smiled and promised to visit every day.
+          </p>
+          <button onclick="listenToStory('cloudStory')">🔊 Listen</button>
+          <button onclick="closeStory('cloudStory')">❌ Close</button>
+        </div>
+
+        <div id="moonStory" class="story-window" style="display:none;">
+          <h3>🌙 Moonlight Adventure</h3>
+          <p>
+            Luna the moonbeam loved to dance across rooftops. One night, she met a sleepy owl who couldn’t find his way home. Luna lit the path with her glow, guiding him through the trees. “Thank you,” hooted the owl, “You shine like a hero!”
+          </p>
+          <button onclick="listenToStory('moonStory')">🔊 Listen</button>
+          <button onclick="closeStory('moonStory')">❌ Close</button>
+        </div>
+
+        <div id="rainbowStory" class="story-window" style="display:none;">
+          <h3>🌈 Rainbow Rescue</h3>
+          <p>
+            A rainbow lost its colors in a storm! Red was hiding in a rose, Blue was swimming in the sea, and Yellow was stuck in a lemon. A brave butterfly flew to each one and whispered, “Come back!” The rainbow smiled and lit up the sky again.
+          </p>
+          <button onclick="listenToStory('rainbowStory')">🔊 Listen</button>
+          <button onclick="closeStory('rainbowStory')">❌ Close</button>
+        </div>
+
+        <div id="seedStory" class="story-window" style="display:none;">
+          <h3>🌱 The Little Seed</h3>
+          <p>
+            A tiny seed dreamed of becoming a tall tree. “Be patient,” said the soil. “Be brave,” said the sun. “Be thirsty,” said the rain. The seed listened, and one day, it stretched its leaves to the sky and whispered, “I made it!”
+          </p>
+          <button onclick="listenToStory('seedStory')">🔊 Listen</button>
+          <button onclick="closeStory('seedStory')">❌ Close</button>
+        </div>
+      </section>
+
+      <!-- 🧩 Reading Quiz Section -->
+      <section id="readingQuiz" style="display:none;">
+        <h2>🧩 Reading Quiz</h2>
+        <p>Answer questions based on the stories you've read!</p>
+        <div id="quizContainer">
+          <p id="quizQuestion"></p>
+          <div id="quizOptions"></div>
+          <button id="nextQuestionBtn" onclick="nextReadingQuestion()" style="display:none;">➡️ Next Question</button>
+          <button class="closebutton" onclick="closeReadingQuiz()">❌ Close</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 🧠 Scripts -->
+  <script src="reading.js"></script>
+</body>
+</html>
+
+

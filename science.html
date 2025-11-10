@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Science Lab</title>
+  <link rel="stylesheet" href="science.css" />
+</head>
+<body>
+   <audio id="backgroundAudio" autoplay loop>
+  <source src="science.mp3" type="audio/mpeg" />
+</audio>
+  <!-- 🌥️ Animated Cloud Background -->
+  <div class="clouds">
+    <img src="whiteclouds1.png" class="cloud cloud1" />
+    <img src="whiteclouds3.png" class="cloud cloud2" />
+    <img src="whiteclouds4.png" class="cloud cloud3" />
+    <img src="whiteclouds5.png" class="cloud cloud4" />
+  </div>
+
+  <!-- 🧭 Navigation -->
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math.html">Maths</a></li>
+        <li><a href="art.html">Creative Corner</a></li>
+        <li><a href="reading.html">Reading Rainbow</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🧪 Main Content -->
+  <main>
+    <h1>🧪 Welcome to the Science Lab!</h1>
+    <h4>Explore the wonders of the world around you!</h4>
+
+    <section class="science-zone">
+      <h2>Choose a Science Adventure:</h2>
+      <div class="cards">
+        <div class="card" onclick="showPlants()">🌱 Learn About Plants</div>
+        <div class="card" onclick="showSpace()">🚀 Explore Space</div>
+        <div class="card" onclick="startScienceQuiz()">🧩 Science Quiz</div>
+      </div>
+    </section>
+
+  <section id="plantsSection" style="display:none;">
+ 
+
+  <div id="plantExplanation">
+     <h2>🌱 How Do Plants Grow?</h2>
+    <p>Plants need sunlight, water, and soil to grow. They use their leaves to catch sunlight and roots to drink water!</p>
+    <div class="visual-steps">
+      <div class="step">Step 1: 🌞 Sunlight hits the leaves</div>
+      <div class="step">Step 2: 💧 Roots absorb water</div>
+      <div class="step">Step 3: 🌿 Plant makes food and grows!</div>
+    </div>
+    <button onclick="startPlantGame()">🌿 Try It Yourself!</button>
+    <button onclick="closePlantExplanation()" style="margin-left:10px;">❌ Close</button>
+  </div>
+</section>
+
+
+   <section id="spaceSection" style="display:none;">
+  
+
+  <div id="spaceExplanation">
+    <h2>🚀 Explore Space</h2>
+    <p>Space is full of stars, planets, moons, and mysteries! Let’s discover some amazing facts:</p>
+    <ul class="space-facts">
+      <li>🌞 The Sun is big enough to fit 1 million Earths inside!</li>
+      <li>🌕 You can't walk on Jupiter or Saturn — they have no solid surface!</li>
+      <li>🌌 Comets are leftovers from the birth of our solar system!</li>
+      <li>🚀 Flying to Pluto would take over 800 years in a plane!</li>
+    </ul>
+    <button onclick="startSpaceGame()">🛸 Launch Rocket!</button>
+   <button onclick="closeSpaceSection()">❌ Close</button>
+
+  </div>
+
+
+  <div id="spaceGameWindow" style="display:none; margin-top:20px;">
+    <p>🌠 Your rocket is ready! Click to launch:</p>
+    <button onclick="launchRocket()">🚀 Blast Off!</button>
+    <div id="rocketAnimation" style="margin-top:20px;"></div>
+  </div>
+</section>
+
+
+ <section id="scienceQuiz" style="display:none;">
+  <h2>🧪 Science Quiz</h2>
+  <div id="quizContainer">
+    <p id="quizQuestion"></p>
+    <div id="quizOptions"></div>
+    <button id="nextQuestionBtn" onclick="nextQuestion()" style="display:none;">➡️ Next Question</button>
+    <button onclick="closeScienceQuiz()">❌ Close</button>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- 🧠 Scripts -->
+  <script src="science.js"></script>
+</body>
+</html>
